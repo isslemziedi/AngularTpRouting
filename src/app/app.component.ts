@@ -1,3 +1,5 @@
+// app.component.ts
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'routing-app-1';
+  country: string = ' Turkey';
+
+  modifyCountry() {
+    const newCountry = prompt('Enter the new country:');
+    
+    if (newCountry !== null) {
+      this.country = newCountry;
+    }
+  }
 }
